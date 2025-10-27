@@ -1,0 +1,117 @@
+/* Style simplifié pour le projet local */
+:root {
+  --primary: #ff4757;
+  --dark: #2f3542;
+  --light: #f1f2f6;
+  --accent: #ffa502;
+  --text: #333;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--dark);
+}
+.navbar .nav-link {
+  color: #fff;
+}
+.navbar .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Header */
+.hero {
+  height: 70vh;
+  background-image: url("images/restaurant1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sections */
+.section-padding {
+  padding: 4rem 1rem;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Menu cards */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+.card .card-body {
+  padding: 1rem;
+}
+.price {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Reservation form */
+.reservation-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Galerie */
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Testimonials */
+blockquote {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+  .card img {
+    height: 180px;
+  }
+}
